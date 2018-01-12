@@ -101,6 +101,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         map.addAnnotation(annotation)
     }
 
+    /* Called whenever there is updated map information for us to process */
     func geocodeCompletionHandler(placemarks: [CLPlacemark]?, error: Error?) -> Void {
         if let placemark = placemarks?[0] {
             if placemark.location != nil {
